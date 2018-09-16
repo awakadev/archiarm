@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="fw-head">
         <!-- header-inner  -->
         <div class="header-inner">
             <!-- header logo -->
@@ -16,11 +16,13 @@
             <div class="nav-holder">
                 <nav>
                     <ul>
-                        <li><router-link to="/">Home</router-link></li>
-                        <li><router-link to="/portfolio">Portfolio</router-link></li>
-                        <li><router-link to="/about">About</router-link></li>
-                        <li><router-link to="/services">Services</router-link></li>
-                        <li><router-link to="/contact">Contact</router-link></li>
+                        <li><router-link to="/" active-class="act-link" exact>{{ $t('home') }}</router-link></li>
+                        <li><router-link to="/portfolio" active-class="act-link" exact>{{ $t('portfolio') }}</router-link></li>
+                        <li><router-link to="/about" active-class="act-link" exact>{{ $t('about') }}</router-link></li>
+                        <li><router-link to="/services" active-class="act-link" exact>{{ $t('services') }}</router-link></li>
+                        <li><router-link to="/contact" active-class="act-link" exact>{{ $t('contact') }}</router-link></li>
+                        <li v-if="$i18n.locale === 'en'"><a href="" @click.prevent="$i18n.locale = 'ru'">RU</a></li>
+                        <li v-else><a href="" @click.prevent="$i18n.locale = 'en'">EN</a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,6 +40,16 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+
+  mounted () {
+    // this.$store.dispatch('setTrigger', { header: true })
+  }
 }
 </script>
+
+<style>
+    .header-hide {
+        display: none;
+    }
+</style>

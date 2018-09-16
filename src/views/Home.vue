@@ -1,159 +1,255 @@
 <template>
-  <div id="wrapper" ref="wrapper">
-    <!-- content-holder  -->
-    <div class="content-holder">
-      <!-- Page title -->
-      <div class="dynamic-title">Portfolio Parallax</div>
-      <!-- Page title  end-->
-      <!-- content  -->
-      <div class="content">
-        <section class="parallax-section">
-          <div class="parallax-inner">
-            <div class="bg" data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);" style="background-image: url('/images/bg/1.jpg')"></div>
-            <div class="overlay"></div>
-          </div>
-          <div class="container">
-            <div class="page-title">
-              <div class="row">
-                <div class="col-md-6">
-                  <h2> Our Work <strong> Parallax</strong></h2>
-                </div>
-                <div class="col-md-6">
-                  <ul class="creat-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="portfolio-parallax.html">Portfolio Parallax</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div>
+    <div class="dynamic-title">Главная</div>
+    <div class="content hor-content full-height">
+      <!-- Hero section   -->
+      <div class="hero-wrap">
+        <!-- Hero image   -->
+        <div class="bg"  data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+        <!-- Hero image   end -->
+        <div class="overlay"></div>
+        <!-- Hero text   -->
+        <div class="hero-wrap-item center-item">
+          <h2> Monolit Studio</h2>
+          <h3>Architecture</h3>
+        </div>
+        <!-- Hero text   end-->
+        <a href="#sec1" class="hero-scroll-link custom-scroll-link" data-top-bottom="transform: translateY(50px);" data-bottom-top="transform: translateY(-50px);"><i class="fa fa-angle-down"></i></a>
       </div>
-      <!-- content end -->
-      <!-- content  -->
-      <div class="content">
-        <section>
-          <div class="container">
-            <div class="row"  v-for="(item, index) in items" :key="index">
-              <div class="col-md-5" v-if="index % 2 === 1"></div>
-              <div class="col-md-7">
-                <div :class="['parallax-item', index % 2 === 0 ? 'left-direction': 'right-direction']">
-                  <div class="paralax-media">
-                    <ul class="creat-list">
-                      <li><a href="#">{{item.tags.date}}</a></li>
-                      <li><a href="#">{{item.tags.skill}}</a></li>
-                      <li><a href="#">{{item.tags.type}}</a></li>
-                    </ul>
-                    <div class="paralax-wrap">
-                      <img :src="item.img" class="respimg" alt="">
-                    </div>
-                  </div>
-                  <div class="parallax-deck" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(200px);" ref="top">
-                    <div class="parallax-deck-item">
-                      <h3>{{item.title}} <strong>{{item.strong}}</strong></h3>
-                      <a href="portfolio-single.html" class="btn anim-button fl-l"><span>View Project</span><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5" v-if="index % 2 !== 1"></div>
-            </div>
-            <div class="content-nav">
-              <ul>
-                <li><a href="portfolio-parallax.html" class="text-link">previous  page</a></li>
-                <li><a href="portfolio-parallax.html" class="text-link">next page</a></li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- content end -->
-      <!-- content footer-->
-      <div class="height-emulator"></div>
-      <footer class="content-footer">
+      <!-- Hero section   end -->
+    </div>
+    <!-- content end -->
+    <!-- content  -->
+    <div class="content">
+      <section id="sec1">
+        <!-- section number   -->
+        <div class="sect-subtitle right-align-dec" data-top-bottom="transform: translateY(200px);" data-bottom-top="transform: translateY(-200px);"><span>01</span></div>
+        <!-- section number  end  -->
         <!--  container  -->
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
-              <!-- Footer logo -->
-              <div class="footer-item footer-logo">
-                <a href="index.html"><img src="images/footer-logo.png" alt=""></a>
-                <p>Our team takes over everything, from an idea and concept development to realization. We believe in traditions and incorporate them within our innovations.Client is the soul of the project.  </p>
+            <div class="col-md-4">
+              <!-- single slider  -->
+              <div class="parallax-box slider-box ">
+                <div class="single-slider-holder">
+                  <div class="single-slider">
+                    <!-- 1 -->
+                    <div class="item">
+                      <img src="images/folio/slider/1.jpg" alt="">
+                    </div>
+                    <!-- 1 end-->
+                    <!-- 2 -->
+                    <div class="item">
+                      <img src="images/folio/slider/1.jpg" alt="">
+                    </div>
+                    <!-- 2 end-->
+                    <!-- 3 -->
+                    <div class="item">
+                      <img src="images/folio/slider/1.jpg" alt="">
+                    </div>
+                    <!-- 3 end  -->
+                  </div>
+                  <div class="customNavigation ssn">
+                    <a class="prev-slide transition"><i class="fa fa-angle-left"></i></a>
+                    <a class="next-slide transition"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+                <!-- single slider  end -->
               </div>
-              <!-- Footer logo end -->
             </div>
-            <!-- Footer info -->
-            <div class="col-md-2">
-              <div class="footer-item">
-                <h4 class="text-link">Call</h4>
-                <ul>
-                  <li><a href="#">+7(111)123456789</a></li>
-                  <li><a href="#">+1(000)987654321</a></li>
+            <div class="col-md-8">
+              <!-- section title  -->
+              <h2 class="section-title">{{ $t('welcome-title') }} <strong> {{ $t('welcome-title-strong') }}</strong></h2>
+              <!-- section title  end -->
+              <p>{{ $t('welcome') }}</p>
+              <p>{{ $t('welcome') }}</p>
+              <div class="process-box">
+                <h3>Our process</h3>
+                <ul class="creat-list">
+                  <li><a href="#">Idea & Start</a></li>
+                  <li><a href="#">Design & Crate</a></li>
+                  <li><a href="#">Build & Finish</a></li>
                 </ul>
               </div>
+              <a href="portfolio.html" class="btn anim-button fl-l"><span>View Our portfolio</span><i class="fa fa-long-arrow-right"></i></a>
             </div>
-            <!-- Footer info end-->
-            <!-- Footer info -->
-            <div class="col-md-2">
-              <div class="footer-item">
-                <h4 class="text-link">Write</h4>
-                <ul>
-                  <li><a href="#">yourmail@domain.com</a></li>
-                  <li><a href="#">email@website.com</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Footer info-->
-            <!-- Footer info end-->
-            <div class="col-md-2">
-              <div class="footer-item">
-                <h4 class="text-link">Visit</h4>
-                <ul>
-                  <li><span>USA 27TH BROOKLYN NY</span></li>
-                  <li> <a href="" target="_blank">View on map</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Footer info end-->
           </div>
-          <!-- Footer copyright -->
+        </div>
+        <!--  container end  -->
+      </section>
+    </div>
+    <!-- content  end  -->
+    <!-- content   -->
+    <div class="content dark-bg">
+      <!-- section number   -->
+      <div class="sect-subtitle left-align-dec" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(200px);"><span>02</span></div>
+      <!-- section number   end -->
+      <!-- parallax image  -->
+      <div class="parallax-inner">
+        <div class="bg" data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+        <div class="overlay"></div>
+      </div>
+      <!-- parallax image  end -->
+      <section>
+        <!--  container  -->
+        <div class="container">
           <div class="row">
-            <div class="col-md-6"></div>
-            <div class="col-md-6">
-              <div class="footer-wrap">
-                                        <span class="copyright">  &#169; Monolit   2016.  All rights reserved.
-                                        </span>
-                <span class="to-top">To Top</span>
-              </div>
+            <div class="col-md-4">
+              <h2 class="section-title">Some Interisting <strong> Facts</strong></h2>
+            </div>
+            <div class="col-md-8">
+              <p>Our team takes over everything, from an idea and concept development to realization. We believe in traditions and incorporate them within our innovations. All our projects incorporate a unique artistic image and functional solutions. Client is the soul of the project. Our main goal is to illustrate his/hers values and individuality through design.</p>
             </div>
           </div>
-          <!-- Footer copyright end -->
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+              <!-- facts   -->
+              <div class="inline-facts-holder row">
+                <!-- 1 -->
+                <div class="inline-facts col-md-4 ">
+                  <div class="milestone-counter">
+                    <div class="stats animaper">
+                      <div class="num" data-content="461" data-num="461">0</div>
+                    </div>
+                  </div>
+                  <h6>Finished projects</h6>
+                </div>
+                <!-- 3 -->
+                <div class="inline-facts col-md-4">
+                  <div class="milestone-counter">
+                    <div class="stats animaper">
+                      <div class="num" data-content="168" data-num="168">0</div>
+                    </div>
+                  </div>
+                  <h6>Happy customers</h6>
+                </div>
+                <!-- 3 -->
+                <div class="inline-facts col-md-4">
+                  <div class="milestone-counter">
+                    <div class="stats animaper">
+                      <div class="num" data-content="222" data-num="222">0</div>
+                    </div>
+                  </div>
+                  <h6>Working hours</h6>
+                </div>
+              </div>
+              <!-- facts   end -->
+            </div>
+          </div>
         </div>
         <!--  container  end -->
-        <!-- Hover animation  -->
-        <canvas class="particular"></canvas>
-        <!-- Hover animation  end -->
-      </footer>
-      <!-- content footer end -->
-      <!-- share  -->
-      <div class="share-inner">
-        <div class="share-container  isShare"  data-share="['facebook','googleplus','twitter','linkedin']"></div>
-        <div class="close-share"></div>
-      </div>
-      <!-- share end -->
+      </section>
     </div>
-    <!-- content-holder  end-->
+    <!-- content  end  -->
+    <!-- content   -->
+    <div class="content">
+      <section>
+        <!-- section number     -->
+        <div class="sect-subtitle right-align-dec" data-top-bottom="transform: translateY(200px);" data-bottom-top="transform: translateY(-200px);"><span>03</span></div>
+        <!-- section number   end -->
+        <!--  container  -->
+        <div class="container">
+          <!--  section title -->
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="section-title algn-right dec-title"><span>Our featured  <strong> Works</strong></span></h2>
+            </div>
+          </div>
+          <!--  section title end  -->
+          <!--  Parallax items  -->
+          <!-- 1 -->
+          <div class="row">
+            <div class="col-md-7">
+              <div class="parallax-item left-direction">
+                <div class="paralax-media">
+                  <ul class="creat-list">
+                    <li><a href="#">Houses</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Skyscraper</a></li>
+                  </ul>
+                  <div class="paralax-wrap">
+                    <img src="images/folio/thumbs/1.jpg" class="respimg" alt="">
+                  </div>
+                </div>
+                <div class="parallax-deck" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(200px);">
+                  <div class="parallax-deck-item">
+                    <h3>Sed ut perspiciatis <strong>unde this</strong></h3>
+                    <a href="portfolio-single.html" class="btn anim-button fl-l"><span>View Project</span><i class="fa fa-long-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5"></div>
+          </div>
+          <!-- 1 end-->
+          <!-- 2 -->
+          <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+              <div class="parallax-item right-direction">
+                <div class="paralax-media">
+                  <ul class="creat-list">
+                    <li><a href="#">Interior</a></li>
+                    <li><a href="#">Wood</a></li>
+                  </ul>
+                  <div class="paralax-wrap">
+                    <img src="images/folio/thumbs/1.jpg" class="respimg" alt="">
+                  </div>
+                </div>
+                <div class="parallax-deck" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(200px);">
+                  <div class="parallax-deck-item">
+                    <h3>Sed ut perspiciatis <strong>unde this</strong></h3>
+                    <a href="portfolio-single.html" class="btn anim-button fl-l"><span>View Project</span><i class="fa fa-long-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 end-->
+          <!-- 3 -->
+          <div class="row">
+            <div class="col-md-7">
+              <div class="parallax-item left-direction">
+                <div class="paralax-media">
+                  <ul class="creat-list">
+                    <li><a href="#">Houses</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Skyscraper</a></li>
+                  </ul>
+                  <div class="paralax-wrap">
+                    <img src="images/folio/thumbs/1.jpg" class="respimg" alt="">
+                  </div>
+                </div>
+                <div class="parallax-deck" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(200px);">
+                  <div class="parallax-deck-item">
+                    <h3>Sed ut perspiciatis <strong>unde this</strong></h3>
+                    <a href="portfolio-single.html" class="btn anim-button fl-l"><span>View Project</span><i class="fa fa-long-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5"></div>
+          </div>
+          <!-- 3 end-->
+          <!-- custom-link-holder  -->
+          <div class="custom-link-holder">
+            <a href="portfolio.html" class="btn anim-button"  data-top-bottom="transform: translateY(-50px);" data-bottom-top="transform: translateY(50px);"><span>View All Projects</span><i class="fa fa-long-arrow-right"></i></a>
+          </div>
+          <!-- custom-link-holder  end -->
+        </div>
+        <!--  container  end -->
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
 
   data () {
     return {
-      scrl: false,
       items: [
         {
           tags: {
@@ -198,23 +294,14 @@ export default {
       ]
     }
   },
-  methods: {
-    handleScroll (event) {
-      if (!this.scrl) {
-        this.skrollr.init({
-          easing: 'easeInOutElastic'
-        })
-        this.scrl = true
-      }
-    }
-  },
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
-    this.skrollr.init().destroy()
-    this.scrl = false
+
+  mounted () {
+    // this.$store.dispatch('setTrigger', { page: 'home', home: true })
+    this.$store.dispatch('clickPage', { page: 'home' })
   }
+
+  // destroyed () {
+  //   this.$store.dispatch('setTrigger', { home: false })
+  // }
 }
 </script>
