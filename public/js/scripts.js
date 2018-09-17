@@ -607,7 +607,6 @@ function initMonolit() {
 function contanimshow() {
   let a = window.location.href
   let b = $('.dynamic-title').text()
-  console.log('100', a, b)
   let ua = window.navigator.userAgent
   let msie = ua.indexOf('MSIE ')
   $('.footer-title a').attr('href', a)
@@ -751,6 +750,10 @@ function initHeader () {
     radius: 350
   })
   // Share   ------------------
+  if ($('.content').hasClass('hor-content')) {
+    $('header').addClass('fw-head')
+    $('.share-inner').addClass('hor-inner')
+  }
   let shs = eval($('.share-container').attr('data-share'))
   $('.share-container').share({
     networks: shs

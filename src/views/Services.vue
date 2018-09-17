@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="dynamic-title">Услуги</div>
-        <div class="content">
+        <div class="content hor-content full-height">
             <section class="parallax-section">
                 <div class="parallax-inner">
                     <div class="bg" data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>

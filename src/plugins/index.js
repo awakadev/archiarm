@@ -1,9 +1,11 @@
 // import SmoothScroll from './SmoothScroll'
-import Skrollr from './skrollr'
+// import ShuffleText from './ShuffleText'
+// import Skrollr from './skrollr'
 
 export default {
   install (Vue) {
     // SmoothScroll(Vue)
-    Skrollr(Vue)
+    // Skrollr(Vue)
+    // ShuffleText(Vue)
   }
 }

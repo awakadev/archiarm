@@ -6,7 +6,7 @@
                 <div class="hide" id="trigger-header" ref="header"></div>
                 <div class="hide" id="trigger-page" ref="page"></div>
                 <router-view/>
-                <div class="height-emulator"></div>
+                <div class="height-emulator" v-if="$route.path !== '/404'"></div>
                 <app-bottom/>
                 <app-share/>
             </div>
