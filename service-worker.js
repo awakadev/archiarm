@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.d9348d848ce042e7848e01cd92d03490.js"
+  "precache-manifest.f03b23db3e9bad48bb57840df10c9cee.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "archiarm"});
