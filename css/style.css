@@ -3752,7 +3752,7 @@ header {
 	background:#000;
 	padding:30px 0 30px 30px;
 	display:none;
-	height:300px;
+	height:auto;
 	overflow:auto;
 }
 nav ul li  , nav ul li ul li , nav li ul li > ul    {
